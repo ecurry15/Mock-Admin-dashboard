@@ -22,9 +22,23 @@ body {
   background-color: #6495ED;
 }
 
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4%;
+  margin-top: 4.5%;
+}
+
+.fish-svg {
+  color: white;
+  padding-left: 5%;
+}
+
 .dashboard h1 {
   color: white;
   font-family: 'Roboto', sans-serif;
+  font-size: 2vw;
 }
 
 .left-nav {
@@ -32,8 +46,24 @@ body {
   list-style: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  margin-top: 3%;
 }
 
+.left-nav li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 6.5%;
+  font-size: 1vw;
+}
+
+.left-nav > li > p {
+  padding-left: 7.5%;
+}
+
+.settings {
+  margin-top: 20%;
+}
 
 .topBar {
   grid-column: 2;
