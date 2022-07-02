@@ -32,6 +32,10 @@ body {
   margin-top: 4.5%;
 }
 
+.dashboard h1:active {
+  transform: scale(0.96);
+}
+
 .fish-svg {
   color: white;
   padding-left: 5%;
@@ -41,6 +45,8 @@ body {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 2vw;
+  cursor: pointer;
+  user-select: none;
 }
 
 .left-nav {
@@ -57,15 +63,30 @@ body {
   align-items: center;
   padding-left: 6.5%;
   font-size: 1vw;
+  user-select: none;
 }
+
+.left-nav li > p:hover {
+text-decoration: underline;
+text-underline-offset: 25%;
+}
+
+.left-nav li > p:active {
+  transform: scale(0.96);
+}
+
 
 .left-nav > li > p {
   padding-left: 7.5%;
+  cursor: pointer;
 }
 
 .settings {
   margin-top: 20%;
 }
+
+
+
 
 .topBar {
   grid-column: 2;
@@ -82,7 +103,7 @@ width: 100%
   display: grid;
 background-color: #e1e7ef;
 grid-template-rows: 5vw 95vw;
-grid-template-columns: 80% 20%;
+grid-template-columns: 70% 25%;
 }
 
 
@@ -94,33 +115,59 @@ grid-template-columns: 80% 20%;
 }
 
 .fa-magnifying-glass {
-  font-size: .9vw;
-  margin-left: 8vw;
+  font-size: 1vw;
+  margin-left: 15vw;
+  cursor: pointer;
 }
 
-input {
+
+
+.input {
   width: 40vw;
   border-style: none;
   background-color: #e1e7ef;
   border-radius: 5vw;
-  padding-top: .3%;
-  padding-bottom: .3%;
+  padding-top: .5%;
+  padding-bottom: .5%;
   padding-left: 1%;
   margin-left: 1.5vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+}
+
+
+input:focus {
+  outline-color: #6495ED;
 }
 
 .bell {
-  margin-left: 15vw;
+  margin-left: 8vw;
+  width: 1.4vw;
+  cursor: pointer;
 }
 
+.bell:active {
+  transform: scale(0.93);
+}
 
-.imgContainer { width: 4%; 
+.imgContainer { width: 5%; 
   text-align: center; 
   position: relative; 
-  padding-bottom: 4%; 
+  padding-bottom: 5%; 
   border-radius: 50%; 
   overflow: hidden;
   margin-left: 2.5vw;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.imgContainer:hover {
+  transform: translate(0, -2%);
+}
+
+.imgContainer:active {
+  transform: scale(0.95);
+  transition: 0s;
 }
 
 .img { position: absolute; 
@@ -134,9 +181,21 @@ input {
 
 .name {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.1vw;
+  font-size: 1.12vw;
   font-weight: 700;
   margin-left: 2.5vw;
+  transition: .2s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.name:hover {
+  transform: translate(0, -6%);
+}
+
+.name:active {
+  transform: scale(0.93);
+  transition: 0s;
 }
 
 .topBarTwo {
@@ -145,27 +204,16 @@ input {
   height: 50%;
 }
 
-.imgContainer2 { width: 4%; 
-  text-align: center; 
-  position: relative; 
-  padding-bottom: 1%; 
-  border-radius: 50%; 
-  overflow: hidden;
-  margin-left: 2vw;
-}
-
-.img2 { position: absolute; 
-  width: 100%; 
-  height: 100%; 
-  top: 0; 
-  left: 0; 
-  object-fit: cover; 
-}
 
 .greeting2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   padding-left: 1vw;
+  transition: .2s;
+}
+
+.greeting2:hover {
+  transform: translate(0, -2%);
 }
 
 .greeting2 p {
@@ -194,12 +242,23 @@ background-color: #6495ED;
 color: white;
 padding-top: .5vw;
 padding-bottom: .5vw;
-padding-left: 1vw;
+padding-left: .9vw;
 padding-right: 1vw;
 border-radius: 20vw;
 font-family: 'Roboto', sans-serif;
-font-size: .8vw;
+font-size: 1vw;
 text-align: center;
+transition: 0.2s;
+cursor: pointer;
+user-select: none;
+}
+
+.topNav  li:hover {
+  transform: translate(0, -4%);
+}
+
+.topNav  li:active {
+  transform: scale(0.93);
 }
 
 .imgContainer2 { 
@@ -211,6 +270,7 @@ text-align: center;
   overflow: hidden;
   margin-left: 3vw;
   align-self: center;
+  transition: .2s;
 }
 
 .img2 { 
@@ -222,7 +282,9 @@ text-align: center;
   object-fit: cover; 
 }
 
-
+.imgContainer2:hover {
+  transform: translate(0, -2%);
+}
 
 .projects {
   font-family: 'Roboto', sans-serif;
@@ -235,6 +297,7 @@ text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 130%;
   font-weight: 700;
+  margin-left: 10%;
 }
 
 
@@ -242,8 +305,8 @@ text-align: center;
   grid-column: 1;
   grid-row: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: 360px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
   gap: 3%;
   padding-left: 2%;
   padding-right: 2%;
@@ -258,6 +321,11 @@ text-align: center;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
   box-shadow: .5px 3px 6px rgb(201, 201, 201), inset 0px 1px 3px rgb(201, 201, 201);;
+  transition: 0.2s;
+}
+
+.mainSixSquares > div:hover {
+  transform: translate(0, -2%);
 }
 
 .mainSixSquares > div::after {
@@ -281,7 +349,6 @@ letter-spacing: .15vw;
   font-size: 110%;
   padding-left: 3vw;
   padding-right: 3vw;
-  padding-top: 1vw;
   margin-top: 0;
   line-height: 150%;
   letter-spacing: .1vw;
@@ -291,6 +358,7 @@ letter-spacing: .15vw;
 .rightSideContent {
   grid-column: 2;
   grid-row: 2;
+  margin-left: 10%;
 }
 
 .doMore-icons {
@@ -305,7 +373,17 @@ letter-spacing: .15vw;
 .doMore-icons > i {
   position: relative;
   align-self: center;
-  font-size: 130%;
+  font-size: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.doMore-icons > i:hover {
+  transform: translate(0, -5%);
+}
+
+.doMore-icons > i:active {
+  transform: scale(0.97);
 }
 
 .rightTopHalf {
@@ -315,6 +393,11 @@ letter-spacing: .15vw;
  padding-top: 3%;
  padding-bottom: 3%;
  box-shadow: .5px 3px 6px rgb(201, 201, 201), inset 0px 1px 2px rgb(201, 201, 201);
+ transition: 0.2s;
+}
+
+.rightTopHalf:hover {
+  transform: translate(0, -2%);
 }
 
 .maintenance, .community {
@@ -330,8 +413,9 @@ margin-right: 10%;
 
 
 .maintenance >  h3, .community > h3, .update > h3  {
-  font-size: 100%;
+  font-size: 110%;
   font-family: 'Roboto', sans-serif;
+  padding-left: 5%;
 }
 
 
@@ -339,8 +423,8 @@ margin-right: 10%;
 .update > p, .maintenance >  p, .community > p {
   font-size: 85%;
   font-family: 'Roboto', sans-serif;
-  padding-right: 2%;
   padding-bottom: 5%;
+  padding-left: 5%;
 }
 
 .rightLowerHalf {
@@ -353,7 +437,12 @@ margin-right: 10%;
  padding-bottom: 5%;
  padding-top: 5%;
  gap: 13px;
- box-shadow: .5px 3px 6px rgb(201, 201, 201), inset 0px 1px 2px rgb(201, 201, 201);;
+ box-shadow: .5px 3px 6px rgb(201, 201, 201), inset 0px 1px 2px rgb(201, 201, 201);
+ transition: 0.2s;
+}
+
+.rightLowerHalf:hover {
+  transform: translate(0, -2%);
 }
 
 
